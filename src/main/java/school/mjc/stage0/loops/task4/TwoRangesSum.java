@@ -16,7 +16,7 @@ public class TwoRangesSum {
                 }
                 counter++;
             } while (numberToSkip < lastInRow && counter < lastInRow);
-            if (numberToSkip < lastInRow) {
+            if (numberToSkip > lastInRow) {
                 System.out.println("number to skip is bugger then the last");
             } else {
                 System.out.println("skipped sum is " + sumSkip);
