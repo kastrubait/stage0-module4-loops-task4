@@ -7,16 +7,28 @@ public class TwoRangesSum {
         } else {
             int sumSkip = 0;
             int sumCount = 0;
-            for (int i = 1; i <= lastInRow; i++) {
-                if (numberToSkip > lastInRow) System.out.println("number to skip is bugger then the last");
+            int counter = 0;
+            do {
                 if (i % numberToSkip == 0) {
                     sumSkip += i;
                 } else {
                     sumCount += i;
                 }
-            }
-            System.out.println("counted sum is" + sumSkip);
-            System.out.println("counted sum is" + sumCount);
+                counter++;
+            } while (numberToSkip < lastInRow && counter < lastInRow);
+
+
+//            for (int i = 1; i <= lastInRow; i++) {
+//                if (numberToSkip > lastInRow) System.out.println("number to skip is bugger then the last");
+//                break;
+//                if (i % numberToSkip == 0) {
+//                    sumSkip += i;
+//                } else {
+//                    sumCount += i;
+//                }
+//            }
+            System.out.println("counted sum is " + sumSkip);
+            System.out.println("counted sum is " + sumCount);
         }
     }
 }
