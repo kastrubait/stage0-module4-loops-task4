@@ -9,10 +9,10 @@ public class TwoRangesSum {
             int sumCount = 0;
             int counter = 0;
             do {
-                if (i % numberToSkip == 0) {
-                    sumSkip += i;
+                if (counter % numberToSkip == 0) {
+                    sumSkip += counter;
                 } else {
-                    sumCount += i;
+                    sumCount += counter;
                 }
                 counter++;
             } while (numberToSkip < lastInRow && counter < lastInRow);
