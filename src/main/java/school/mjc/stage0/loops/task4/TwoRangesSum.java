@@ -16,19 +16,12 @@ public class TwoRangesSum {
                 }
                 counter++;
             } while (numberToSkip < lastInRow && counter < lastInRow);
-
-
-//            for (int i = 1; i <= lastInRow; i++) {
-//                if (numberToSkip > lastInRow) System.out.println("number to skip is bugger then the last");
-//                break;
-//                if (i % numberToSkip == 0) {
-//                    sumSkip += i;
-//                } else {
-//                    sumCount += i;
-//                }
-//            }
-            System.out.println("counted sum is " + sumSkip);
-            System.out.println("counted sum is " + sumCount);
+            if (numberToSkip < lastInRow) {
+                System.out.println("number to skip is bugger then the last");
+            } else {
+                System.out.println("skipped sum is " + sumSkip);
+                System.out.println("counted sum is " + sumCount);
+            }
         }
     }
 }
